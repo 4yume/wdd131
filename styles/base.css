@@ -37,7 +37,7 @@ main {
     max-width: 800px;
     display: grid;
     margin: 10px auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 10px;
 }
 
@@ -49,9 +49,19 @@ main h1 {
 }
 
 .card {
-
     border: 1px solid;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card ul {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card a {
+    line-height: 1.5;
 }
 
 .card h2 {
@@ -69,11 +79,19 @@ main h1 {
     line-height: 1.5;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 5rem;
+.content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
 }
+
+.content img {
+    max-width: 200px;
+    height: auto;
+}
+
+
 
 footer {
     background-color: rgb(54, 80, 166);
