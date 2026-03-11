@@ -12,6 +12,10 @@ header {
     margin: 0;
 }
 
+nav {
+    background-color: rgb(74, 24, 121);
+}
+
 #menu {
     font-size: 30px;
     background: none;
