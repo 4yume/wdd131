@@ -12,17 +12,17 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    background-color: var(--main-color);
+    background: var(--main-color);
 }
 
 header {
-    background-color: var(--main-color);
+    background: var(--main-color);
     padding: 2rem;
     text-align: center;
 }
 
 main {
-    background-color: var(--second-color);
+    background: var(--second-color);
     color: var(--main-color);
     display: block;
 }
@@ -50,7 +50,7 @@ h2 {
 }
 
 footer {
-    background-color: var(--main-color);
+    background: var(--main-color);
     text-align: center;
     padding: 1rem;
 }
@@ -72,14 +72,14 @@ footer {
         position: absolute;
         top: 20%;
         left: 5%;
-        background-color: var(--second-color);
+        background: var(--second-color);
     }
 
     .weather {
         position: absolute;
         bottom: 20%;
         right: 5%;
-        background-color: var(--second-color);
+        background: var(--second-color);
     }
 
     .weather-icon {
