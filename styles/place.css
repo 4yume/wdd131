@@ -1,6 +1,6 @@
 :root {
     --main-color: white;
-    --second-color: rgba(174, 3, 3, 0.841);
+    --second-color: rgba(174, 3, 3);
 }
 
 * {
@@ -35,7 +35,7 @@ main {
 section {
     text-align: center;
     padding: 1rem 0;
-    border: solid 1px var(--second-color);
+    border: solid 1px var(--main-color);
 }
 
 h2 {
