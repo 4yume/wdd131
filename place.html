@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place</title>
+    <meta name="author" content="Yumeto Kozuma">
+    <meta name="description" content="describe about the place where do I live">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Japan</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/osaka.webp" media="(min-width: 500px)">
+                <img src="images/osaka-mobile.webp" alt="osaka dodonbori" width="500px">
+            </picture>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+            <p>Area: 377,975km²</p>
+            <p>Population: 123,192,000</p>
+            <p>Capital: Tokyo</p>
+            <p> Languages: Japanese</p>
+            <p>Currency: JPY</p>
+            <p>TIme Zone: UTC+9</p>
+            <p>Calling Code: +81</p>
+            <p>Internet TLD: .jp</p>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="weather icon" class="weather-icon" width="100">
+            <p>Temperature: <span id="temperature">12</span> ℃</p>
+            <p>Conditions: Sunny</p>
+            <p>Wind: <span id="wind">3.6</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span>⚽Yumeto Kozuma⚽ Japan</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

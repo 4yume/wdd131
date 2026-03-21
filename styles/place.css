@@ -1,0 +1,92 @@
+:root {
+    --main-color: white;
+    --second-color: rgba(174, 3, 3, 0.841);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: var(--main-color);
+}
+
+header {
+    background-color: var(--main-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+main {
+    background-color: var(--second-color);
+    color: var(--main-color);
+    display: block;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    text-align: center;
+    padding: 1rem 0;
+    border: solid 1px var(--second-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.data p,
+.weather p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+@media (min-width: 500px) {
+    .hero {
+        position: relative;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .data {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        background-color: var(--second-color);
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 20%;
+        right: 5%;
+        background-color: var(--second-color);
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "🌤️";
+    }
+}
