@@ -111,7 +111,7 @@ const container = document.querySelector(".container");
 
 function createTempleCard(temples) {
     container.innerHTML = "";
-
+    
     temples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h2");
