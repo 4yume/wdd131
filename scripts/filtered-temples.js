@@ -105,3 +105,40 @@ const temples = [
             "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg"
     }
 ];
+
+
+const container = document.querySelector(".container");
+
+function createTempleCard(temples) {
+    container.innerHTML = "";
+
+    temples.forEach(temple => {
+        let card = document.createElement("section");
+        let name = document.createElement("h2");
+        let location = document.createElement("p");
+        let dedicated = document.createElement("p");
+        let area = document.createElement("p");
+        let img = document.createElement("img");
+
+        name.textContent = temple.templeName;
+        location.textContent = `Location: ${temple.location}`;
+        dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+        area.textContent = `Size: ${temple.area} sq ft`;
+
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+        img.loading = "lazy";
+
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedicated);
+        card.appendChild(area);
+        card.appendChild(img);
+
+        container.appendChild(card);
+    });
+}
+
+createTempleCard(temples);
+
+
