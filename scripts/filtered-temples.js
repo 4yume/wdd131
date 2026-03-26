@@ -142,3 +142,38 @@ function createTempleCard(temples) {
 createTempleCard(temples);
 
 
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
+
+homeLink.addEventListener("click", () => {
+    createTempleCard(temples);
+});
+
+oldLink.addEventListener("click", () => {
+    const oldTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated);
+        return year < 1990;
+    });
+    createTempleCard(oldTemples);
+});
+
+newLink.addEventListener("click", () => {
+    const newTemples = temples.filter(temples => {
+        const year = parseInt(temples.dedicated);
+        return year > 2000;
+    });
+    createTempleCard(newTemples);
+})
+
+largeLink.addEventListener("click", () => {
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+    createTempleCard(largeTemples);
+})
+
+smallLink.addEventListener("click", () => {
+    const smallTemples = temples.filter(temple => temple.area <= 10000);
+    createTempleCard(smallTemples);
+})
