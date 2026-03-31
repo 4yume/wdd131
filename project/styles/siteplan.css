@@ -1,0 +1,26 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+header{
+    color: white;
+    background: lightblue;
+}
+
+section {
+    border: 2px solid grey;
+    padding: 5px 2rem;
+    margin: 1rem 0;
+    display: block;
+}
+
+.wireframe {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wireframe img {
+    width: 500px;
+}
