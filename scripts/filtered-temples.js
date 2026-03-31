@@ -155,7 +155,7 @@ homeLink.addEventListener("click", () => {
 oldLink.addEventListener("click", () => {
     const oldTemples = temples.filter(temple => {
         const year = parseInt(temple.dedicated);
-        return year < 1990;
+        return year < 1900;
     });
     createTempleCard(oldTemples);
 });
