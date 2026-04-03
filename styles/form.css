@@ -1,0 +1,79 @@
+body {
+    font-family: "Roboto" sans-serif;
+    margin: 0;
+}
+
+main {
+    font-weight: 600;
+}
+
+header,
+footer {
+    background: rgb(47, 7, 47);
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1px 0;
+}
+
+form {
+    background: rgb(190, 181, 190);
+    color: black;
+    border-radius: 6px;
+}
+
+fieldset {
+    display: block;
+    border: none;
+    margin: 1rem 0;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+select,
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    height: 3rem;
+}
+
+input[type="submit"] {
+    width: 95%;
+    height: 3rem;
+    font-weight: 600;
+}
+
+.star {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.star input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}
+
+.feature label {
+    display: flex;
+    align-items: center;
+}

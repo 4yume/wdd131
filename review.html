@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <p id="counter"></p>
+    </main>
+
+    <script>
+        let reviews = localStorage.getItem("reviews");
+
+        if (reviews === null) {
+            reviews = 0;
+        }
+
+        reviews = Number(reviews) + 1;
+
+        localStorage.setItem("reviews", reviews);
+
+        document.getElementById("counter").textContent = "Reviews submitted " + reviews;
+    </script>
+</body>
+
+</html>
