@@ -17,7 +17,7 @@ footer {
 }
 
 form {
-    background: rgb(190, 181, 190);
+    background: lightgrey;
     color: black;
     border-radius: 6px;
 }
@@ -78,18 +78,18 @@ input[type="checkbox"] {
     align-items: center;
 }
 
-.optional{
-    color: rgb(6, 6, 210);
+.optional {
+    color: #0c0cb0;
 }
 
 
 
-@media(min-width: 600px){
-    body{
+@media(min-width: 600px) {
+    body {
         font-size: 1.4rem;
     }
-    
-    form{
+
+    form {
         max-width: 500px;
         margin: 0 auto;
     }
