@@ -77,3 +77,20 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
 }
+
+.optional{
+    color: rgb(6, 6, 210);
+}
+
+
+
+@media(min-width: 600px){
+    body{
+        font-size: 1.4rem;
+    }
+    
+    form{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
