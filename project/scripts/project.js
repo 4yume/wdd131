@@ -5,6 +5,23 @@ document.getElementById("currentyear").innerHTML = year;
 document.getElementById("lastModified").innerHTML = document.lastModified;
 
 
+const menuButton = document.querySelector(`#menu`);
+const nav = document.querySelector(`nav ul`);
+const title = document.querySelector("header h1")
+
+menuButton.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    title.classList.toggle("hide");
+
+    if (menuButton.textContent === "≣") {
+        menuButton.textContent = "X"
+    }
+    else {
+        menuButton.textContent = "≣"
+    }
+});
+
+
 //create pet card
 const pets = [
     {
@@ -89,14 +106,18 @@ const pets = [
     }
 ];
 
-function displayPets(petList) {
+function displayPets(petList, filterName) {
+    localStorage.setItem("filter", filterName);
+
     const container = document.getElementById("petContainer");
-    container.innerHTML = "";
+    
+
+    let html = "";
 
     petList.forEach(pet => {
-        container.innerHTML += `
+        html += `
         <div class="pet">
-            <img src = "${pet.image}" alt="${pet.breed}">
+            <img src = "${pet.image}" alt="${pet.breed}" loading="lazy">
             <h2>${pet.breed}</h2>
             <p>Gender: ${pet.gender}</p>
             <p>Age: ${pet.age}</p>
@@ -104,32 +125,61 @@ function displayPets(petList) {
         </div>
         `;
     });
+
+    container.innerHTML = html;
 }
 
-displayPets(pets);
+
+
+
+const saved = localStorage.getItem("filter");
+
+if (saved === "dog") {
+    displayPets(pets.filter(p => p.type === "dog"), "dog");
+}
+else if (saved === "cat") {
+    displayPets(pets.filter(p => p.type === "cat"), "cat");
+}
+else if (saved === "baby") {
+    displayPets(pets.filter(p => p.age === "baby"), "baby");
+}
+else if (saved === "adult") {
+    displayPets(pets.filter(p => p.age === "adult"), "adult");
+}
+else {
+    displayPets(pets, "home");
+}
 
 
 //add interaction
-document.querySelector("#home").addEventListener("click", () => {
-    displayPets(pets);
+document.querySelector("#home").addEventListener("click", (e) => {
+    e.preventDefault();
+    displayPets(pets, "home");
 });
 
-document.querySelector("#dog").addEventListener("click", () => {
+document.querySelector("#dog").addEventListener("click", (e) => {
+    e.preventDefault();
     const dogs = pets.filter(pet => pet.type === "dog");
-    displayPets(dogs);
+    displayPets(dogs, "dog");
 });
 
-document.querySelector("#cat").addEventListener("click", () => {
+document.querySelector("#cat").addEventListener("click", (e) => {
+    e.preventDefault();
     const cats = pets.filter(pet => pet.type === "cat");
-    displayPets(cats);
+    displayPets(cats, "cat");
 });
 
-document.querySelector("#baby").addEventListener("click", () => {
+document.querySelector("#baby").addEventListener("click", (e) => {
+    e.preventDefault();
     const babys = pets.filter(pet => pet.age === "baby");
-    displayPets(babys);
+    displayPets(babys, "baby");
 });
 
-document.querySelector("#adult").addEventListener("click", () => {
+document.querySelector("#adult").addEventListener("click", (e) => {
+    e.preventDefault();
     const adults = pets.filter(pet => pet.age === "adult");
-    displayPets(adults);
+    displayPets(adults, "adult");
 });
+
+
+/*local storage*/

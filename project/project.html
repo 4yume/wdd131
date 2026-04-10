@@ -7,7 +7,7 @@
     <title>Project</title>
 
     <meta name="description"
-        content="This site alllows to narrow down your search by several categories to find the pet you're looking for.">
+        content="This site allows to narrow down your search by several categories to find the pet you're looking for.">
     <meta name="author" content="Yumeto Kozuma">
 
     <link rel="stylesheet" href="styles/project.css">
@@ -34,7 +34,29 @@
     </header>
 
     <main>
-        <h1>Home</h1>
+
+        <form>
+            <fieldset>
+                <label for="name">Your Name: </label>
+                <input type="text" id="name" name="name" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="petType">Preferred Pet: </label>
+                <select name="petType" id="petType" required>
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Baby</option>
+                    <option>Adult</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Apply</button>
+            </fieldset>
+        </form>
+
+        <h2>Home</h2>
         <div id="petContainer"></div>
     </main>
 
