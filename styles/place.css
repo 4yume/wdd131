@@ -33,8 +33,9 @@ main {
 }
 
 section {
+    margin: 1rem;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
     border: solid 1px var(--main-color);
 }
 
@@ -55,9 +56,13 @@ footer {
     padding: 1rem;
 }
 
-
+.weather h2::after{
+    content: "";
+}
 
 @media (min-width: 500px) {
+    
+
     .hero {
         position: relative;
     }
