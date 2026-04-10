@@ -63,6 +63,11 @@ footer {
 
 #petContainer {
     padding: 0 10px;
+    background: rgb(202, 185, 185);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .pet {
@@ -87,6 +92,10 @@ footer {
 }
 
 /*form*/
+form{
+    background: rgb(202, 185, 185);
+}
+
 fieldset {
     display: block;
     border: none;
@@ -127,7 +136,5 @@ button {
     #petContainer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        background: rgb(202, 185, 185);
     }
 }
