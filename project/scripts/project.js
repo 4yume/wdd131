@@ -117,8 +117,8 @@ function displayPets(petList, filterName) {
     petList.forEach(pet => {
         html += `
         <div class="pet">
-            <img src = "${pet.image}" alt="${pet.breed}" loading="lazy">
-            <h2>${pet.breed}</h2>
+            <img src = "${pet.image}" alt="${pet.breed}" loading="lazy" width="300" height="auto">
+            <h3>${pet.breed}</h3>
             <p>Gender: ${pet.gender}</p>
             <p>Age: ${pet.age}</p>
             <p>Price: ${pet.cost}</p>
@@ -193,7 +193,7 @@ contactLink.addEventListener("click", (e) => {
 
     container.innerHTML = `
     <div class="cf">
-        <h2>Contact Us</h2>
+        <h3>Contact Us</h3>
         <form id="contactForm">
             <fieldset>
                 <label for="name">Your Name: </label>
