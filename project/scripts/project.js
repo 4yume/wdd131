@@ -182,4 +182,56 @@ document.querySelector("#adult").addEventListener("click", (e) => {
 });
 
 
-/*local storage*/
+
+/*contact*/
+const contactLink = document.getElementById("contact");
+
+contactLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const container = document.getElementById("petContainer");
+
+    container.innerHTML = `
+    <div class="cf">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <fieldset>
+                <label for="name">Your Name: </label>
+                <input type="text" id="name" name="name" required>
+            </fieldset>
+
+            <fieldset>
+                <label for="petType">Preferred Pet: </label>
+                <select name="petType" id="petType" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Baby</option>
+                    <option>Adult</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Contact</button>
+            </fieldset>
+        </form>
+    </div>
+    `;
+
+    /*local Storage*/
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const petType = document.getElementById("petType").value;
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("petType", petType);
+
+        container.innerHTML = `
+        <p>Thank you, ${name}! Your application has been submitted.</p>
+        `;
+    });
+});
